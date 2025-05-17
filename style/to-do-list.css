@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-accent: greenyellow;
+
+  --primary-font: "Cedarville Cursive", cursive;
+  --secondary-font: cursive;
+
+  --font-s: 1rem;
+  --font-m: 1.5rem;
+  --font-l: 2rem;
+  --font-xl: 2.5rem;
+
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 32px;
+  --spacing-xl: 64px;
+
+  --standard-border-radius: 10px;
+
+  --primary-shadow: 0px 10px 25px 5px rgba(128, 128, 128, 0.514);
+}
+
+body {
+  background-color: var(--primary-accent);
+  font-family: var(--primary-font);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.input-task {
+  font-family: var(--secondary-font);
+  width: 400px;
+  height: 68px;
+  font-size: var(--font-l);
+  padding: var(--spacing-m);
+  border-top-left-radius: var(--standard-border-radius);
+  border-top-right-radius: var(--standard-border-radius);
+  border: none;
+  box-shadow: var(--primary-shadow);
+}
+
+.list {
+  width: 400px;
+  background-color: yellow;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: var(--primary-shadow);
+  font-size: var(--font-m);
+  border-bottom-left-radius: var(--standard-border-radius);
+  border-bottom-right-radius: var(--standard-border-radius);
+}
+
+.list li {
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing-s) var(--spacing-m);
+  border-top: 2px dashed grey;
+}
+
+.list-container {
+  position: absolute;
+}
+
+.list img {
+  width: 14px;
+  height: 16px;
+}
+
+.list .two-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list .col-right img:hover {
+  cursor: pointer;
+}
+
+.completed {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.js-completed-check {
+  display: none;
+}
+
+.js-hide-check {
+  display: none;
+}
